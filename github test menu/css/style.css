@@ -1,0 +1,232 @@
+/* =========================
+   إعدادات عامة للموقع
+========================= */
+
+html{
+    scroll-behavior: smooth; /* تنقل سلس عند الضغط على روابط الأقسام */
+}
+
+body{
+    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    direction: rtl;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+
+/* =========================
+   رأس الصفحة (اسم المطعم)
+========================= */
+
+header{
+    background-color: rgb(246, 137, 28);
+    padding: 0.01% 0;
+}
+
+#resturant-title{
+    text-align: center;
+    color: white;
+}
+
+
+/* =========================
+   شريط التنقل بين الأقسام
+========================= */
+
+nav{
+    display: flex;
+    gap: 20px;
+    background-color: black;
+    justify-content: center;
+    font-weight: bold;
+    padding: 3% 0;
+}
+
+nav a{
+    color: rgb(246, 137, 28);
+    text-decoration: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+/* تأثير عند مرور الماوس على الرابط */
+nav a:hover{
+    color: black;
+    background-color: rgb(246, 137, 28);
+}
+
+
+/* =========================
+   عناوين الأقسام
+   (بركر - بيتزا - مشروبات)
+========================= */
+
+section h2{
+    font-weight: bold;
+    border-right: 5px solid rgb(246, 137, 28);
+    padding-right: 10px;
+
+    /* مسافات حول عنوان القسم */
+    margin-right: 15px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   شبكة عرض الوجبات
+   غيّر عدد الأعمدة من هنا
+========================= */
+
+.menu-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 10px;
+}
+
+
+/* =========================
+   بطاقة الوجبة
+========================= */
+
+.meal-card{
+    box-shadow: 0 2px 8px rgba(116, 113, 113, 0.3);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #cccccc;
+    background-color: white;
+    padding: 8px;
+    align-items: center;
+}
+
+
+/* صورة الوجبة */
+.meal-card img{
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+
+    /* يجعل جميع الصور بنفس الأبعاد */
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    background-color: white;
+}
+
+/* اسم الوجبة */
+.meal-name{
+    font-weight: bold;
+}
+
+
+/* سعر الوجبة */
+.price{
+    color: #3d9241;
+    font-weight: bold;
+}
+
+/*-----------------
+    نافذة منبثقة popup
+-------------------*/
+
+/* الخلفية المعتمة التي تغطي الشاشة بالكامل */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* خلفية سوداء شفافة */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* لضمان ظهورها فوق كل عناصر الموقع */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease; /* تأثير حركة ناعم عند الظهور */
+}
+
+/* يوضع هذا الكلاس بواسطة الجافاسكربت لإظهار النافذة */
+.popup-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* صندوق المحتوى الأبيض الداخلي للـ Popup */
+.popup-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* زر الإغلاق (X) في الزاوية */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+/* تنسيق صورة الوجبة داخل الـ Popup */
+.popup-content img {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   وصف مختصر للمكونات
+   داخل بطاقة الوجبة
+========================= */
+
+.ingredients-preview{
+    color: #777;
+    font-size: 13px;
+    text-align: center;
+    margin-top: -5px;
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   المكونات داخل الـ Popup
+========================= */
+
+.popup-ingredients-box{
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.popup-ingredients-box h4{
+    margin-bottom: 10px;
+    color: rgb(246, 137, 28);
+}
+
+#popup-ingredients{
+    color: #444;
+    line-height: 1.8;
+    margin: 0;
+}
