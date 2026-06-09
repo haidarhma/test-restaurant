@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- إعدادات الصفحة الأساسية -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- اسم الصفحة في المتصفح -->
+    <title>Test resturant</title>
+
+    <!-- ملف التنسيق CSS -->
+    <link rel="stylesheet" href="..\Js_css\style.css">
+
+</head>
+
+<body>
+
+    <!-- اسم المطعم -->
+    <header>
+        <h1 id="resturant-title">Test resturant</h1>
+    </header>
+
+    <!--
+    قائمة التنقل بين الأقسام
+
+    عند إضافة قسم جديد:
+    1- أضف رابط هنا
+    2- أنشئ Section بنفس الـ id
+    -->
+    <nav>
+        <a href="#burger-section" id="burger">بركر</a>
+        <a href="#pizza-section" id="pizza">بيتزا</a>
+        <a href="#drinks-section" id="drinks">مشروبات</a>
+    </nav>
+
+    <!-- ================= قسم البركر ================= -->
+    <section id="burger-section">
+
+        <h2>بركر</h2>
+
+        <!-- جميع وجبات البركر -->
+        <div class="menu-grid">
+
+            <!--
+            قالب إضافة وجبة جديدة:
+
+            <div class="meal-card"
+            onclick="openPopup('اسم الوجبة','السعر','مسار الصورة','المكونات الكاملة')">
+
+                <img src="مسار الصورة" alt="اسم الوجبة">
+
+                <p class="meal-name">اسم الوجبة</p>
+
+                <p class="ingredients-preview">
+                    مكون 1، مكون 2...
+                </p>
+
+                <p class="price">السعر</p>
+
+            </div>
+            -->
+
+            <div class="meal-card"
+            onclick="openPopup(
+            'بركر دجاج',
+            'السعر 5,000',
+            '\\images\\بركر دجاج.jpg',
+            'دجاج مقرمش، خس، طماطم، جبن شيدر، صوص خاص'
+            )">
+
+                <img src="\images\بركر دجاج.jpg" alt="بركر دجاج">
+
+                <p class="meal-name">بركر دجاج</p>
+
+                <p class="ingredients-preview">
+                   دجاج مقرمش، خس، طما...
+                </p>
+
+                <p class="price">السعر 5,000</p>
+
+            </div>
+
+            <div class="meal-card"
+            onclick="openPopup(
+            'جيز بركر',
+            'السعر 6,000',
+            '\\images\\جيز بركر.jpg',
+            'لحم بقري، جبن شيدر، خس، مخلل، صوص بركر'
+            )">
+
+                <img src="\images\جيز بركر.jpg" alt="جيز بركر">
+
+                <p class="meal-name">جيز بركر</p>
+
+                <p class="ingredients-preview">
+                   لحم بقري، جبن...
+                </p>
+
+                <p class="price">السعر 6,000</p>
+
+            </div>
+
+            <div class="meal-card"
+            onclick="openPopup(
+            'دبل بركر',
+            'السعر 11,000',
+            '\\images\\دبل بركر.jpg',
+                 'قطعتان  بركر، جبن شيدر، خس، بصل، مخلل، صوص خاص'
+            )">
+
+                <img src="\images\دبل بركر.jpg" alt="دبل بركر">
+
+                <p class="meal-name">دبل بركر</p>
+
+                <p class="ingredients-preview">
+                    قطعتان  بركر، جبن ش                
+                </p>
+
+                <p class="price">السعر 11,000</p>
+
+            </div>
+
+            <div class="meal-card"
+            onclick="openPopup(
+            'دبل بركر',
+            'السعر 11,000',
+            '\\images\\دبل بركر.jpg',
+                 'قطعتان  بركر، جبن شيدر، خس، بصل، مخلل، صوص خاص'
+            )">
+
+                <img src="\images\دبل بركر.jpg" alt="دبل بركر مضاعف">
+
+                <p class="meal-name">دبل بركر</p>
+
+                <p class="ingredients-preview">
+                    قطعتان  بركر، جبن ش               
+                </p>
+
+                <p class="price">السعر 11,000</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+        <!-- ================= قسم البيتزا ================= -->
+    <section id="pizza-section">
+
+        <h2>بيتزا</h2>
+
+        <!-- جميع أنواع البيتزا -->
+        <div class="menu-grid">
+
+            <div class="meal-card"
+            onclick="openPopup(
+            'بيتزا جبن',
+            'السعر 10,000',
+            '\\images\\بيتزا جبن.jpg',
+            'عجينة طازجة، صلصة بيتزا، جبن موزاريلا'
+            )">
+
+                <img src="\images\بيتزا جبن.jpg" alt="بيتزا جبن">
+
+                <p class="meal-name">بيتزا جبن</p>
+
+                <p class="ingredients-preview">
+                    عجينة طازجة، صل...
+                        </p>
+
+                <p class="price">السعر 10,000</p>
+
+            </div>
+
+            <div class="meal-card"
+            onclick="openPopup(
+            'بيتزا دجاج',
+            'السعر 11,000',
+            '\\images\\بيتزا دجاج.png',
+            'دجاج، موزاريلا، فلفل رومي، صلصة بيتزا'
+            )">
+
+                <img src="\images\بيتزا دجاج.png" alt="بيتزا دجاج">
+
+                <p class="meal-name">بيتزا دجاج</p>
+
+                <p class="ingredients-preview">
+                    دجاج، موزاري...
+                </p>
+
+                <p class="price">السعر 11,000</p>
+
+            </div>
+
+            <div class="meal-card"
+            onclick="openPopup(
+            'بيتزا لحم',
+            'السعر 12,000',
+            '\\images\\بيتزا لحم.jpg',
+            'لحم مفروم، موزاريلا، صلصة بيتزا، بصل'
+            )">
+
+                <!--
+                هذه الصورة لها تنسيق خاص
+                لأن أبعاد الصورة الأصلية تختلف عن بقية الصور
+                -->
+                <img src="\images\بيتزا لحم.jpg" alt="بيتزا لحم" style="
+                aspect-ratio: 1/1;
+                object-fit: contain;
+                border: 1px solid rgb(160, 159, 159);">
+
+                <p class="meal-name">بيتزا لحم</p>
+
+                <p class="ingredients-preview">
+                    لحم مفروم، موزاري...
+                </p>
+
+                <p class="price">السعر 12,000</p>
+
+            </div>
+
+            <div class="meal-card"
+            onclick="openPopup(
+            'بيتزا خضار',
+            'السعر 9,000',
+            '\\images\\بيتزا خضار.jpg',
+            'فلفل، زيتون، فطر، ذرة، موزاريلا'
+            )">
+
+                <img src="\images\بيتزا خضار.jpg" alt="بيتزا خضار">
+
+                <p class="meal-name">بيتزا خضار</p>
+
+                <p class="ingredients-preview">
+                    فلفل، زيتون، فط...
+                </p>
+
+                <p class="price">السعر 9,000</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= قسم المشروبات ================= -->
+    <section id="drinks-section">
+
+        <h2>مشروبات</h2>
+
+        <!-- جميع المشروبات -->
+        <div class="menu-grid">
+
+            <div class="meal-card"
+            onclick="openPopup(
+            'بيبسي',
+            'السعر 500',
+            '\\images\\ببسي.jpeg',
+            'مشروب غازي'
+            )">
+
+                <img src="\images\ببسي.jpeg" alt="بيبسي">
+
+                <p class="meal-name">بيبسي</p>
+
+                <p class="ingredients-preview">
+                    مشروب غازي
+                </p>
+
+                <p class="price">السعر 500</p>
+
+            </div>
+
+            <div class="meal-card"
+            onclick="openPopup(
+            'ديو',
+            'السعر 500',
+            '\\images\\ديو.jpg',
+            'مشروب غازي'
+            )">
+
+                <img src="\images\ديو.jpg" alt="ديو">
+
+                <p class="meal-name">ديو</p>
+
+                <p class="ingredients-preview">
+                    مشروب غازي
+                </p>
+
+                <p class="price">السعر 500</p>
+
+            </div>
+
+            <div class="meal-card"
+            onclick="openPopup(
+            'ميرندا',
+            'السعر 500',
+            '\\images\\ميرندا.jpg',
+            'مشروب غازي'
+            )">
+
+                <img src="\images\ميرندا.jpg" alt="ميرندا">
+
+                <p class="meal-name">ميرندا</p>
+
+                <p class="ingredients-preview">
+                    مشروب غازي
+                </p>
+
+                <p class="price">السعر 500</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--
+    النافذة المنبثقة (Popup)
+
+    يتم تغيير:
+    - الصورة
+    - اسم الوجبة
+    - السعر
+    - المكونات
+
+    تلقائياً بواسطة JavaScript
+    -->
+    <div id="meal-popup" class="popup-overlay">
+
+        <div class="popup-content">
+
+            <!-- زر إغلاق النافذة -->
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+
+            <img id="popup-img" src="" alt="صورة الوجبة المنبثقة">
+
+            <h3 id="popup-title">اسم الوجبة</h3>
+
+            <p id="popup-price">السعر</p>
+
+            <!-- المكونات الكاملة للوجبة -->
+            <div class="popup-ingredients-box">
+
+                <h4>المكونات</h4>
+
+                <p id="popup-ingredients">
+                    تظهر المكونات هنا
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--
+    ملف JavaScript
+
+    مسؤول عن:
+    - فتح النافذة المنبثقة
+    - إغلاقها
+    - تغيير بيانات الوجبة المختارة
+    - عرض المكونات
+    -->
+    <script src="..\Js_css\script.js"></script>
+
+</body>
+</html>
