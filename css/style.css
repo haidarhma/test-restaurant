@@ -19,15 +19,27 @@ body{
    رأس الصفحة (اسم المطعم)
 ========================= */
 
-header{
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* مسافة ممتازة بين الشعار والنص */
     background-color: rgb(246, 137, 28);
-    padding: 0.01% 0;
+    padding: 10px 0; /* إضافة مساحة علوية وسفلية خفيفة للهيدر */
 }
 
-#resturant-title{
-    text-align: center;
-    color: white;
+.logo {
+    width: 50px;  
+    height: 50px;
+    object-fit: contain;
 }
+
+#resturant-title {
+    margin: 0;
+    font-size: 28px; 
+    color: #000000;
+}
+
 
 
 /* =========================
