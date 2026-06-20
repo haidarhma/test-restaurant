@@ -1,0 +1,148 @@
+html{
+    scroll-behavior: smooth; /* تنقل سلس عند الضغط على روابط الأقسام */
+}
+
+body{
+    background-color: #f4f0d6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    direction: rtl;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+
+/* =========================
+   رأس الصفحة (اسم المطعم)
+========================= */
+
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px 0;
+    
+}
+
+.logo {
+    width: 50px;  
+    height: 50px;
+    object-fit: contain;
+}
+
+#resturant-title {
+    margin: 0;
+    font-size: 28px; 
+    color: #000000;
+}
+
+nav{
+    display: flex;
+    gap: 25px;
+    font-weight: bold;
+   
+}
+
+nav a{
+    text-decoration: none;
+    color: #525c33 ;
+     border-bottom: 1px solid #535c38 ;
+     padding-bottom: 5px;
+}
+
+nav a:hover{
+    border-bottom: 3px solid #525c33;
+    padding-bottom: 5px;
+}
+
+section h2{
+    margin-right: 5%;
+}
+
+.menu-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+}
+
+.meal-card{
+    background-color: #fffbdf;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-radius: 20px;
+    padding: 6px;
+    direction: rtl;
+    box-shadow: 0 2px 8px #b8b49d;
+    overflow: hidden;
+    margin: 0 3%;
+}
+
+.meal-card img{
+    border-radius: 10px;
+    width: 40%;
+    height: 40%;
+    object-fit: cover;
+    order: 2;
+}
+
+.meal-info {
+  display: flex;
+  flex-direction: column;
+  order: 1;
+  flex-grow: 1;
+  margin-right: 2%;
+}
+
+.item-name, .ingredients, .price {
+  margin: 4px; 
+  padding: 2px 0; /* تحكم في المساحة العلوية والسفلية لكل سطر */
+}
+
+.item-name , .price{
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+@media (min-width: 767px)  {
+
+    #resturant-title {
+        font-size: 42px;
+    }
+
+    nav a {
+        font-size: 24px;
+    }
+
+    .item-name {
+        font-size: 28px;
+        
+    }
+
+    .ingredients {
+        font-size: 20px;
+    }
+
+    .price {
+        font-size: 24px;
+    }
+
+    section h2 {
+        font-size: 36px;
+    }
+    
+    .item-name{
+        margin-bottom: 5%;
+    }
+
+    .ingredients{
+        margin-bottom: 12%;
+    }
+
+    .meal-card{
+        padding: 12px;
+    }
+    
+}
