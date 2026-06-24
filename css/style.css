@@ -25,6 +25,7 @@ body{
     gap: 15px; /* مسافة ممتازة بين الشعار والنص */
     background-color: rgb(246, 137, 28);
     padding: 10px 0; /* إضافة مساحة علوية وسفلية خفيفة للهيدر */
+    
 }
 
 .logo {
@@ -144,6 +145,25 @@ section h2{
     color: #3d9241;
     font-weight: bold;
 }
+
+hr{
+    height: 1px;
+    background-color: rgb(246, 137, 28);
+}
+
+
+footer a{
+    text-decoration: none;
+    color: #000000;
+    background-color: rgb(246, 137, 28);
+    box-shadow: 0 2px 8px #b8b49d;
+    border-radius: 20px;
+    padding: 3px 9px;
+    margin-right: 2px;
+    text-align: center;
+}
+
+
 
 /*-----------------
     نافذة منبثقة popup

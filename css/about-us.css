@@ -1,0 +1,146 @@
+
+
+body{
+    direction: rtl;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-bottom: 20px;
+    background-color: #0b1420;
+    color: white;
+    
+}
+
+
+
+header {
+    display: flex;
+    flex-direction: column;
+    background-image: url('../images/about-us/image1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: overlay;
+    gap: 15px;
+    color: #c5a059;
+    text-align: center;
+}
+
+#logo-name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* تنسيق اللوجو  الهيدر */
+#logo {
+    width: 50px;
+    height: auto;
+}
+
+.header-info h1 {
+    color: #ffffff; /* لون النص الأبيض */
+    margin: 5px 0;
+}
+
+.golden-text {
+    color: #c5a059 !important; /* اللون الذهبي */
+}
+
+h2{
+    color: #c5a059;
+}
+
+.what-do-we-give{
+    background-color:#353535 ;
+}
+
+.what-do-we-give div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.what-do-we-give img{
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    
+}   
+
+.why-digital-menu div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.why-digital-menu img{
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    
+}   
+
+
+
+
+.my-works{
+    background-color:#353535 ;
+    display: flex;
+    flex-direction: column;
+}
+
+.my-works h2{
+    display: flex;
+    align-self: flex-start;
+}
+
+
+.gallary{
+    display: flex;
+    margin-right: 20ox;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallary-item p{
+    text-align: center;
+    font-weight: bold;
+}
+
+.my-works img{
+    display: flex;
+    width: 140px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.whatsapp-btn {
+    background-color: #25D366; /* لون الواتساب */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px; /* الزوايا الدائرية */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* مسافة بين النص والأيقونة */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+.whatsapp-btn:hover {
+    background-color: #128C7E; /* لون أغمق عند التمرير */
+}
+
+.whatsapp-btn svg {
+    fill: white; /* تأكد من أن الأيقونة بيضاء */
+}
+
+
+
